@@ -1,0 +1,48 @@
+<%-css('style/index')-%>
+<div class="app">
+    <side class="sidebar">
+        <header class="sidebar-title"><%-config.title-%></header>
+        <ul class="menus">
+        <% for(let i=0;i<theme.menus.length;i++) { %>
+            <li class="menu active" title="<%-theme.menus[i].name-%>">
+                <i class="icon <%=theme.menus[i].icon%>"></i><span class="menu-name"><%=theme.menus[i].name%></span>
+            </li>  
+        <%}%>
+        </ul>
+        <div class="avatar-container">
+            <div class="avatar">
+                <img class="inner" src="<%-theme.avatar-%>" alt="">
+            </div>
+        </div>
+    </side>
+
+    <div class="content-thumb">
+        <div class="tabs">
+            <% theme.tabs.forEach(tab=>{%>
+            <div class="tab active">
+                <%-tab.label-%>
+            </div>
+            <%})%>
+        </div>
+        <ul class="list">
+            <% new Array(20).fill(site.posts.data[0]).forEach((post)=>{ %> 
+                <li class="row">
+                    <div class="img-placeholder" style="background-image: url('<%-post.src||'https://stylus.bootcss.com/img/stylus-logo.png'-%>');"></div>
+                    <div class="thumb-info">
+                        <div class="date">日期：<%-post.date.format('YYYY-MM-DD')-%></div>
+                        <div class="brief" title="<%-post.brief-%>"><%-post.brief-%></div>
+                        <div class="footer">by <span class="hl"><%-post.author-%></span></div>
+                    </div>
+                </li>
+            <% }) %>
+            <!-- <li style="width: 100px;height:50px;background-color:red;"></li> -->
+        </ul>
+    </div>
+
+    <main class="content">
+        <div class="widget">
+            <button class="dropdown-button">分享</button>
+        </div>
+        <article class="article"><%-site.posts.data[0].content%></article>
+    </main>
+</div>

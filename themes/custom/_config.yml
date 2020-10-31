@@ -1,0 +1,15 @@
+iconCss: //at.alicdn.com/t/font_2170709_n2heh01kneb.css
+
+avatar: ./IMG_0049.jpeg
+
+menus:
+  - icon: iconfont icon-bxs-home
+    name: 首页
+  - icon: iconfont icon-bx-collection
+    name: 收集
+
+tabs:
+  - label: 最新
+    value: newest
+  - label: 类别
+    value: category
