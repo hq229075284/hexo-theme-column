@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,18 @@
     <%- css('init.css') -%>
     <link rel="stylesheet" href="<%-theme.iconCss%>">
     <script>
-        function calcRem(){
-            const htmlFontSize=document.documentElement.clientWidth/1520*100
-            document.documentElement.style.fontSize=htmlFontSize+'px'
+        function calcRem() {
+            const htmlFontSize = document.documentElement.clientWidth / 1520 * 100
+            document.documentElement.style.fontSize = htmlFontSize + 'px'
         }
         calcRem()
-        window.addEventListener('resize',calcRem)
+        window.addEventListener('resize', calcRem);
     </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
     <%-body%>
 </body>
+
 </html>
