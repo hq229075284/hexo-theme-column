@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<%-theme.iconCss%>">
     <script>
         function calcRem(){
-            const htmlFontSize=document.documentElement.clientWidth/1520*100
+            const htmlFontSize=Math.max(document.documentElement.clientWidth,800)/1520*100
             document.documentElement.style.fontSize=htmlFontSize+'px'
         }
         calcRem()

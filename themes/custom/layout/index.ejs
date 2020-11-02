@@ -1,8 +1,14 @@
 <%-css('vue')-%>
+<%-css('hljs-theme/github-gist')-%>
 <%-css('style/index')-%>
 <div class="app">
     <side class="sidebar">
-        <header class="sidebar-title"><%-config.title-%></header>
+        <header class="">
+            <div class="sidebar-title"><%-config.title-%></div>
+            <div class="icons">
+                <i class="iconfont icon-github"></i>
+            </div>
+        </header>
         <ul class="menus">
         <% for(let i=0;i<theme.menus.length;i++) { %>
             <li class="menu active" title="<%-theme.menus[i].name-%>">
@@ -20,19 +26,22 @@
     <div class="content-thumb">
         <div class="tabs">
             <% theme.tabs.forEach(tab=>{%>
-            <div class="tab active">
+            <div class="tab ">
                 <%-tab.label-%>
             </div>
             <%})%>
         </div>
         <ul class="list">
-            <% new Array(20).fill(site.posts.data[0]).forEach((post)=>{ %> 
+            <% site.posts.forEach((post)=>{ %> 
                 <li class="row">
-                    <div class="img-placeholder" style="background-image: url('<%-post.src||'https://stylus.bootcss.com/img/stylus-logo.png'-%>');"></div>
+                    <div class="img-placeholder" style="background-image: url('<%-post.src||theme.defaultSrc-%>');"></div>
                     <div class="thumb-info">
-                        <div class="date">日期：<%-post.date.format('YYYY-MM-DD')-%></div>
+                        <div class="title" title="<%-post.title-%>"><%-post.title-%></div>
                         <div class="brief" title="<%-post.brief-%>"><%-post.brief-%></div>
-                        <div class="footer">by <span class="hl"><%-post.author-%></span></div>
+                        <div class="footer">
+                            <div class="date"><%-post.date.format('YYYY/MM/DD')-%></div>
+                            <div>by <span class="hl"><%-post.author-%></span></div>
+                        </div>
                     </div>
                 </li>
             <% }) %>

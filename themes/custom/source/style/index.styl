@@ -15,71 +15,78 @@ $borderColor=#F0F0F0
     display: flex
     flex-direction: column
 
-    .sidebar-title
-        display: inline-block
-        width: 100%
-        text-align: center
-        margin: 56px auto 45px
-        color:$highLightColor
-        font-size: 26px
-        font-weight: 900
+    header
+        font-size: .2rem
+        margin: 56px 0 30px
         flex-shrink: 0
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        text-align: center
+        .icons
+            margin-top: 15px
+            .iconfont
+                cursor pointer
+        .sidebar-title
+            color:$highLightColor
+            font-weight: 900
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
     .menus
-        flex auto
-        overflow-x hidden
-        .menu
-            cursor pointer
-            height 40px
-            line-height 40px
-            border-left: 4px solid transparent
-            padding-left: 10%
-            color: $normalColor
-            font-size: 14px
-            display: flex
-            > * 
-                vertical-align: middle
-            &.active
-                background-color: #F9F9F9
-                border-left-color: $highLightColor
-            .icon
-                margin-right: 20px
-                font-size: 20px
-            .menu-name
-                flex: auto;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-        .menu + .menu
-            margin-top: 8px
-    .avatar
-        width: 50%
-        max-width: 80px
-        border-radius: 50%
-        overflow hidden
-        position: relative
-        border: 2px solid $borderColor
-        margin: 10px auto
-        &::before
-            content:''
-            display: block
-            width: 100%
-            padding-top: 100%
-        .inner
-            position: absolute
-            top:0
-            left 0
-            width: 100%
-            height: 100%
-            object-fit: cover
+            flex auto
+            overflow-x hidden
+            .menu
+                cursor pointer
+                height 40px
+                line-height 40px
+                border-left: 4px solid transparent
+                padding-left: 10%
+                color: $normalColor
+                font-size: 14px
+                display: flex
+                > * 
+                    vertical-align: middle
+                &.active
+                    background-color: #F9F9F9
+                    border-left-color: $highLightColor
+                .icon
+                    margin-right: 20px
+                    font-size: 20px
+                .menu-name
+                    flex: auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+            .menu + .menu
+                margin-top: 8px    
+        
+    .avatar-container
+            border-top:1px solid $borderColor
+        .avatar
+            width: 50%
+            max-width: 80px
+            border-radius: 50%
+            overflow hidden
+            position: relative
+            border: 2px solid $borderColor
+            margin: 10px auto
+            &::before
+                content:''
+                display: block
+                width: 100%
+                padding-top: 100%
+            .inner
+                position: absolute
+                top:0
+                left 0
+                width: 100%
+                height: 100%
+                object-fit: cover    
 
 // 条件栏
 .content-thumb
     max-width: 432px;
     flex: 0 0 28%;
     // flex: 0 0 432px
+    min-width: 0
     border-right: 1px solid $borderColor;
     display: flex
     flex-direction: column
@@ -89,6 +96,8 @@ $borderColor=#F0F0F0
         font-size: 0
         padding: 0 30px
         flex-shrink: 0
+        white-space nowrap
+        overflow-y: hidden
         .tab
             padding: 10px 14px
             text-align: center
@@ -98,8 +107,10 @@ $borderColor=#F0F0F0
             display: inline-block;
             line-height: 30px
             cursor pointer
+            border-bottom: 1px solid transparent
             &.active
                 color:$highLightColor
+                border-color: $highLightColor
     .list
         overflow-x: hidden
         flex auto
@@ -112,6 +123,7 @@ $borderColor=#F0F0F0
         .img-placeholder
             width: 25%
             padding-top: 25%
+            border-radius: 4px
             background-position: center
             background-repeat: no-repeat
             background-size: cover
@@ -124,8 +136,11 @@ $borderColor=#F0F0F0
                 color:$normalColor
                 font-size: 10px
                 font-weight: 400
-            .brief
+            .title
+                font-size: 16px
                 color:$strongColor
+            .brief
+                color:darken($normalColor, 30%)
                 font-size: 14px
                 line-height: 22px;
                 margin: 8px 0 8px
@@ -140,6 +155,8 @@ $borderColor=#F0F0F0
                 color:$normalColor
                 line-height: 14px
                 font-weight: 400;
+                display: flex
+                justify-content: space-between
                 .hl{
                     color:$highLightColor
                 }
