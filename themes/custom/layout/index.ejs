@@ -25,11 +25,13 @@
 
     <div class="content-thumb">
         <div class="tabs">
-            <% theme.tabs.forEach(tab=>{%>
-            <div class="tab ">
-                <%-tab.label-%>
+            <div class="slide">
+                <% theme.tabs.forEach(tab=>{%>
+                <div class="tab active">
+                    <%-tab.label-%>
+                </div>
+                <%})%>
             </div>
-            <%})%>
         </div>
         <ul class="list">
             <% site.posts.forEach((post)=>{ %> 
@@ -56,3 +58,4 @@
         <article class="article"><%-site.posts.data[0].content%></article>
     </main>
 </div>
+<%-js('js/initTabs')-%>

@@ -2,8 +2,12 @@
 title: Hello World
 brief: New startup idea loremsu ipsumers Lorem ipsum lorem them startuping
 # date: '2020.09.17'
+src: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1604306099773&di=4e6f5d4ef87d3aefbda0262aea04b252&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201303%2F18%2F233119quyrec7to3ws3rco.jpg
 author: hanq
 # src: https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4092687158,279235402&fm=11&gp=0.jpg
+tag: 1
+category: 1
+project: 1
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
