@@ -1,12 +1,17 @@
-iconCss: //at.alicdn.com/t/font_2170709_538pbdk35om.css
+iconCss: //at.alicdn.com/t/font_2170709_43uj0ismij6.css
 
 avatar: ./IMG_0049.jpeg
 
 menus:
   - icon: iconfont icon-bxs-home
-    name: 首页
-  - icon: iconfont icon-bx-collection
-    name: 收集
+    key: airticle
+    name: 全部文章
+  - icon: iconfont icon-bxs-bookmarks
+    name: 文章标签
+    key: tags
+  - icon: iconfont icon-bxs-bot
+    name: 关于
+    key: about
 
 tabs:
   - label: 最新

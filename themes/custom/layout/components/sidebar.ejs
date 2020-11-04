@@ -5,13 +5,17 @@
             <i class="iconfont icon-github"></i>
         </div>
     </header>
+
     <ul class="menus">
-    <% for(let i=0;i<theme.menus.length;i++) { %>
-        <li class="menu <%theme.menus[i].value===path%>" title="<%-theme.menus[i].name-%>">
-            <i class="icon <%=theme.menus[i].icon%>"></i><span class="menu-name"><%=theme.menus[i].name%></span>
-        </li>  
-    <%}%>
+        <% for(let i=0;i<theme.menus.length;i++) { %>
+            <li class="menu <%- ((path===site.HOME_HTML_PAGE_PATH&&i===0)||path.split('/')[0]===theme.menus[i].code)?'active':'' -%>" 
+                title="<%-theme.menus[i].name-%>"
+            >
+                <i class="icon <%=theme.menus[i].icon%>"></i><span class="menu-name"><%=theme.menus[i].name%></span>
+            </li>  
+        <%}%>
     </ul>
+    
     <div class="avatar-container">
         <div class="avatar">
             <img class="inner" src="<%-theme.avatar-%>" alt="">
