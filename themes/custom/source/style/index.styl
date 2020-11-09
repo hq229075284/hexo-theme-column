@@ -5,7 +5,7 @@ $borderColor=#F0F0F0
 
 .app{
     display: flex;
-    padding-top:30px
+    padding-top:31px
     box-sizing: border-box
 }
 .tool-set
@@ -56,12 +56,13 @@ $borderColor=#F0F0F0
                 height 40px
                 line-height 40px
                 border-left: 4px solid transparent
-                padding-left: 10%
                 color: $normalColor
                 font-size: 14px
-                display: flex
-                > * 
-                    vertical-align: middle
+                .link 
+                    display: flex
+                    padding-left: 10%
+                    > * 
+                        vertical-align: middle
                 &.active
                     background-color: #F9F9F9
                     border-left-color: $highLightColor
@@ -133,11 +134,20 @@ $borderColor=#F0F0F0
         overflow-x: hidden
         flex auto
     .row
-        padding: 20px .2rem 20px
-        display: flex
         cursor pointer
+        position: relative
+        &.active::before
+            content: ''
+            position: absolute
+            border: 5px solid $highLightColor
+            border-right-color: transparent
+            border-bottom-color: transparent
         &.active,&:hover
             background-color: #F9F9F9
+        > a
+            padding: 20px .2rem 20px
+            display: flex
+            text-decoration: none;
         .img-placeholder
             width: 25%
             padding-top: 25%
@@ -211,4 +221,5 @@ $borderColor=#F0F0F0
 
     .article
         flex:auto
+        padding-bottom: 50px
         font-size: (18/100rem);

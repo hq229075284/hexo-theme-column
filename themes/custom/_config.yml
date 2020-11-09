@@ -4,7 +4,7 @@ avatar: ./IMG_0049.jpeg
 
 menus:
   - icon: iconfont icon-bxs-home
-    key: airticle
+    key: articles
     name: 全部文章
   - icon: iconfont icon-bxs-bookmarks
     name: 文章标签

@@ -1,1 +1,18 @@
-this is post
+<%-css('style/index')-%>
+
+<%-partial('components/sidebar')-%>
+
+<div class="content-thumb">
+    <!-- <div class="tabs">
+        <div class="slide">
+            <% theme.tabs.forEach(tab=>{%>
+            <div class="tab active">
+                <%-tab.label-%>
+            </div>
+            <%})%>
+        </div>
+    </div> -->
+    <%-partial('components/list')-%>
+</div>
+
+<%-partial('components/content')-%>

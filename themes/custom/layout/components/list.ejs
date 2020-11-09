@@ -1,6 +1,7 @@
 <ul class="list">
     <% site.posts.forEach((post,i)=>{ %>
     <li class="row <%-isHighLightPost({post,path,index:i})-%>">
+        <a href="<%-url_for(post.path)-%>">
         <div class="img-placeholder" style="background-image: url('<%-post.src||theme.defaultSrc-%>');"></div>
         <div class="thumb-info">
             <div class="title" title="<%-post.title-%>"><%-post.title-%></div>
@@ -10,7 +11,10 @@
                 <div>by <span class="hl"><%-post.author||config.author-%></span></div>
             </div>
         </div>
+        </a>
     </li>
     <% }) %>
     <!-- <li style="width: 100px;height:50px;background-color:red;"></li> -->
 </ul>
+
+<%-js('js/rememberScroll.js')-%>

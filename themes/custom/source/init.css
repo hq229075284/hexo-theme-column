@@ -33,3 +33,13 @@ html,body{
 ::-webkit-scrollbar-corner{
     display: none;
 }
+
+@font-face {
+    font-family: pingfang;
+    font-display: fallback;
+    src: url('./font/pingfang.ttf')
+}
+
+* {
+    font-family: pingfang;
+}

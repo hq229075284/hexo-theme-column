@@ -1,6 +1,8 @@
+<%-css('markdownStyle/vue')-%>
+<%-css('hljs-theme/github-gist')-%>
 <main class="content">
     <div class="widget">
         <button class="dropdown-button">分享</button>
     </div>
-    <article class="article"><%-site.posts.data[0].content%></article>
+    <article class="article"><%-getArticleContent({site,path})%></article>
 </main>
